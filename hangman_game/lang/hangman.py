@@ -3,6 +3,7 @@ import linecache
 import os
 import time
 from .wisielec_print import wisielec
+from .lang_strings import output_strings
 import pathlib
 
 # Get the path to the directory containing this file
@@ -11,47 +12,6 @@ module_path = pathlib.Path(__file__).resolve().parent
 # Get the path to the text file relative to the module directory
 slowa_file_path = module_path / 'slowa.txt'
 words_file_path = module_path / 'words.txt'
-
-
-output_strings = {
-    "PL": {
-        "choose_dict": "Wybierz słownik z którego zostanie pobrane słowo.\n(1) Polski lub (2) Angielski.",
-        "banner": " +++++++++++++++++\n+ W I S I E L E C +\n ++++++++++++++++\n\n",
-        "lives": "Szubienica czeka.. Pozostało prób:",
-        "last_chance": "OSTATNIA PRÓBA!",
-        "guess_letter" : "Podaj literę: ",
-        "guessed": "ODGADŁEŚ!!",
-        "already_taken": "Już wybierałeś tę literę, spróbuj jeszcze raz.\n",
-        "guesses": "Wybierane do tej pory: ",
-        "press_any": "Naciśnij dowolny klawisz aby kontynuować.",
-        "not_guessed": "NIE ODGADŁEŚ!",
-        "end" : "Koniec gry... odpowiedź:",
-        "congrat": "GRATULACJE!!!!",
-        "play_again": "Czy chcesz zagrać jeszcze raz? (t/n): ",
-        "yes": "t",
-        "bye": "pa",
-    },
-    "EN": {
-        "choose_dict": "Please choose the dictionary:\n(1) Polish or (2) English.",
-        "banner": " +++++++++++++++++\n + H A N G M A N +\n ++++++++++++++++\n\n",
-        "lives": "The gallows is waiting. The lives left:",
-        "last_chance": "The Last Chance!",
-        "guess_letter" : "Guess the letter: ",
-        "guessed": "YOU GUESSED!!",
-        "already_taken": "You have already chosen that letter, please try again.\n",
-        "guesses": "The letters you have tried so far: ",
-        "press_any": "Press any key.",
-        "not_guessed": "NOT GUESSED!!",
-        "end" : "Game over... word: ",
-        "congrat": "CONGRATULATIONS!!!!",
-        "play_again": "Do you want to play again? (y/n): ",
-        "yes": "y",
-        "bye": "bye",
-    }
-
-}
-
-
 
 
 def graj(language):
